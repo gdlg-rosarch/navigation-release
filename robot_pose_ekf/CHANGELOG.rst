@@ -2,24 +2,24 @@
 Changelog for package robot_pose_ekf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.15.2 (2018-03-22)
+1.14.3 (2018-03-16)
 -------------------
-* Merge pull request `#673 <https://github.com/ros-planning/navigation/issues/673>`_ from ros-planning/email_update_lunar
-  update maintainer email (lunar)
-* Fixes `#313 <https://github.com/ros-planning/navigation/issues/313>`_ (Lunar) (`#655 <https://github.com/ros-planning/navigation/issues/655>`_)
-* Merge pull request `#649 <https://github.com/ros-planning/navigation/issues/649>`_ from aaronhoy/lunar_add_ahoy
+* Merge pull request `#672 <https://github.com/ros-planning/navigation/issues/672>`_ from ros-planning/email_update_kinetic
+  update maintainer email (kinetic)
+* Fixes `#313 <https://github.com/ros-planning/navigation/issues/313>`_ (kinetic) (`#654 <https://github.com/ros-planning/navigation/issues/654>`_)
+* Merge pull request `#648 <https://github.com/ros-planning/navigation/issues/648>`_ from aaronhoy/kinetic_add_ahoy
   Add myself as a maintainer.
-* Contributors: Aaron Hoy, David V. Lu!!, Michael Ferguson
+* added message_generation to build deps to prevent failing generation of GetStatus, MakeNavPlan and SetCostmap (`#640 <https://github.com/ros-planning/navigation/issues/640>`_)
+* Contributors: Aaron Hoy, David V. Lu!!, Leroy Rügemer, Michael Ferguson
 
-1.15.1 (2017-08-14)
+1.14.2 (2017-08-14)
 -------------------
 
-1.15.0 (2017-08-07)
+1.14.1 (2017-08-07)
 -------------------
-* convert packages to format2
 * Fix CMakeLists + package.xmls (`#548 <https://github.com/ros-planning/navigation/issues/548>`_)
 * Initialization of filter with GPS and odometry.
-* Contributors: Martin Günther, Mikael Arguedas, Vincent Rabaud, azaganidis
+* Contributors: Martin Günther, Vincent Rabaud, azaganidis
 
 1.14.0 (2016-05-20)
 -------------------

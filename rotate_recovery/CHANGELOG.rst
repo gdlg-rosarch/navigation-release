@@ -2,37 +2,24 @@
 Changelog for package rotate_recovery
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.15.2 (2018-03-22)
+1.14.3 (2018-03-16)
 -------------------
-* Merge pull request `#673 <https://github.com/ros-planning/navigation/issues/673>`_ from ros-planning/email_update_lunar
-  update maintainer email (lunar)
-* Merge pull request `#649 <https://github.com/ros-planning/navigation/issues/649>`_ from aaronhoy/lunar_add_ahoy
+* Merge pull request `#672 <https://github.com/ros-planning/navigation/issues/672>`_ from ros-planning/email_update_kinetic
+  update maintainer email (kinetic)
+* Merge pull request `#648 <https://github.com/ros-planning/navigation/issues/648>`_ from aaronhoy/kinetic_add_ahoy
   Add myself as a maintainer.
-* Rebase PRs from Indigo/Kinetic (`#637 <https://github.com/ros-planning/navigation/issues/637>`_)
-  * Respect planner_frequency intended behavior (`#622 <https://github.com/ros-planning/navigation/issues/622>`_)
-  * Only do a getRobotPose when no start pose is given (`#628 <https://github.com/ros-planning/navigation/issues/628>`_)
-  Omit the unnecessary call to getRobotPose when the start pose was
-  already given, so that move_base can also generate a path in
-  situations where getRobotPose would fail.
-  This is actually to work around an issue of getRobotPose randomly
-  failing.
-  * Update gradient_path.cpp (`#576 <https://github.com/ros-planning/navigation/issues/576>`_)
-  * Update gradient_path.cpp
-  * Update navfn.cpp
-  * update to use non deprecated pluginlib macro (`#630 <https://github.com/ros-planning/navigation/issues/630>`_)
-  * update to use non deprecated pluginlib macro
+* update to use non deprecated pluginlib macro (`#630 
+<https://github.com/ros-planning/navigation/issues/630>`_)
   * multiline version as well
-  * Print SDL error on IMG_Load failure in server_map (`#631 <https://github.com/ros-planning/navigation/issues/631>`_)
-* Contributors: Aaron Hoy, David V. Lu!!, Michael Ferguson
+* Contributors: Aaron Hoy, Michael Ferguson, Mikael Arguedas
 
-1.15.1 (2017-08-14)
+1.14.2 (2017-08-14)
 -------------------
 
-1.15.0 (2017-08-07)
+1.14.1 (2017-08-07)
 -------------------
-* convert packages to format2
 * Fix CMakeLists + package.xmls (`#548 <https://github.com/ros-planning/navigation/issues/548>`_)
-* Contributors: Martin Günther, Mikael Arguedas, Vincent Rabaud
+* Contributors: Martin Günther, Vincent Rabaud
 
 1.14.0 (2016-05-20)
 -------------------
