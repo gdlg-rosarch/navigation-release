@@ -1,32 +1,49 @@
 # Script generated with Bloom
-pkgdesc="ROS - @(Description)"
-@[if Homepage and Homepage != '']url='@(Homepage)'@[end if]
+pkgdesc="ROS - A ROS node that simply forwards odometry information."
+url='http://wiki.ros.org/fake_localization'
 
-pkgname='@(Package)'
-pkgver='@(Version)_@(Pkgrel)'
+pkgname='ros-lunar-fake-localization'
+pkgver='1.15.2_1'
 pkgrel=1
 arch=('any')
-license=(@[for p in Licenses]'@p'@\n@[end for])
+license=('BSD'
+)
 
-makedepends=(@[for p in BuildDepends]'@p'@\n@[end for])
+makedepends=('ros-lunar-angles'
+'ros-lunar-catkin'
+'ros-lunar-geometry-msgs'
+'ros-lunar-message-filters'
+'ros-lunar-nav-msgs'
+'ros-lunar-rosconsole'
+'ros-lunar-roscpp'
+'ros-lunar-rospy'
+'ros-lunar-tf'
+)
 
-depends=(@[for p in Depends]'@p'@\n@[end for])
+depends=('ros-lunar-geometry-msgs'
+'ros-lunar-message-filters'
+'ros-lunar-nav-msgs'
+'ros-lunar-rosconsole'
+'ros-lunar-roscpp'
+'ros-lunar-rospy'
+'ros-lunar-tf'
+)
 
-conflicts=(@[for p in Conflicts]'@p'@\n@[end for])
-replaces=(@[for p in Replaces]'@p'@\n@[end for])
+conflicts=()
+replaces=()
 
-_dir=@(Name)
+_dir=fake_localization
 source=()
 md5sums=()
 
 prepare() {
-    cp -R $startdir/@(Name) $srcdir/@(Name)
+    cp -R $startdir/fake_localization $srcdir/fake_localization
 }
 
 build() {
   # Use ROS environment variables
   source /usr/share/ros-build-tools/clear-ros-env.sh
-  [ -f /opt/ros/@(ROSDistribution)/setup.bash ] && source /opt/ros/@(ROSDistribution)/setup.bash
+  [ -f /opt/ros/lunar/setup.bash ] && source /opt/ros/lunar/setup.bash
 
   # Create build directory
   [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
@@ -39,7 +56,7 @@ build() {
   cmake ${srcdir}/${_dir} \
         -DCMAKE_BUILD_TYPE=Release \
         -DCATKIN_BUILD_BINARY_PACKAGE=ON \
-        -DCMAKE_INSTALL_PREFIX=/opt/ros/@(ROSDistribution) \
+        -DCMAKE_INSTALL_PREFIX=/opt/ros/lunar \
         -DPYTHON_EXECUTABLE=/usr/bin/python2 \
         -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 \
         -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so \
